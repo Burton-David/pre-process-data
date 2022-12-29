@@ -1,4 +1,15 @@
-# pre-process-data
+# Overview
+Welcome to the Data Cleaning and Visualization Tools repository! This repository contains a collection of Python scripts and Jupyter notebooks that can be used to clean, explore, and visualize data using a variety of popular libraries.
+
+The loadCSV.py module contains a function that can be used to load CSV files into Pandas dataframes, even if the files have unusual formatting or structure. The explore.ipynb Jupyter notebook provides an easy-to-use interface for loading CSV files and performing basic data exploration tasks, such as printing the first few rows of the data, calculating statistics, and plotting a pairplot.
+
+The clean_data.py module contains a function that can be used to clean data in a Pandas dataframe by removing rows with missing values, dropping duplicates, replacing invalid values, imputing missing values, and normalizing numerical columns.
+
+The plotly_visualization.py, Altair_visualization.py, Seaborn_visualization.py, and Bokeh_visualization.py scripts contain functions that can be used to create a variety of plots using the Plotly, Altair, Seaborn, and Bokeh libraries, respectively. These scripts provide a convenient way to quickly visualize and understand the relationships in your data.
+
+Whether you need to clean, explore, or visualize your data, this repository has you covered. Simply clone the repository and import the functions into your Python code to get started. Check out the documentation and examples in the code to see how each tool works and how to use it in your projects. We hope these tools will be useful to you and look forward to your feedback and contributions!
+
+# More Details
 
 ## loadCSV.py
 This program first tries to load the CSV file with the default arguments of the read_csv function. If that fails, it tries to load the file with a different delimiter (tab-separated values). If that also fails, it tries to load the file with no header row. If all of these attempts fail, it tries to load the file with a different encoding and a different quoting style. If all attempts fail, it raises a ValueError indicating that the CSV file could not be loaded.
