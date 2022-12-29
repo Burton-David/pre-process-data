@@ -44,17 +44,20 @@ You can also customize the appearance and behavior of the plots by using additio
 This class provides a variety of functions for retrieving data from an API and returning it as a Pandas DataFrame. The get_data function sends a request to the API and returns the data as a DataFrame. The other functions build on this function to provide additional functionality, such as pagination, date range filtering, location filtering, ID-based filtering, and search query-based filtering.
 
 To use these functions, you would first create an instance of the APIImporter class, passing in the API URL as an argument. Then, you could call any of the functions on the instance, passing in the necessary arguments. For example:
-~~~api = APIImporter('https://my-api.com')
-df = api.get_data('endpoint', params={'param1': 'value1', 'param2': 'value2'})~~~ 
+~~~ api = APIImporter('https://my-api.com')
+df = api.get_data('endpoint', params={'param1': 'value1', 'param2': 'value2'}
+~~~
 
 ## data_encoder
 This class provides a variety of functions for encoding and decoding data. The base64_encode and base64_decode functions use base64 encoding to encode and decode data. The rot13_encode and rot13_decode functions use ROT13 encoding to encode and decode data. The xor_encode and xor_decode functions use XOR encryption to encode and decode data.
 
 To use these functions, you would first create an instance of the DataEncoder class. Then, you could call any of the functions on the instance, passing in the necessary arguments. For example:
 
-~~~encoder = DataEncoder()
+~~~
+encoder = DataEncoder()
 encoded_data = encoder.base64_encode(b'Hello, World!')
 print(encoded_data)  # Output: SGVsbG8sIFdvcmxkIQ==
 decoded_data = encoder.base64_decode(encoded_data)
-print(decoded_data)  # Output: b'Hello, World!'~~~
+print(decoded_data)  # Output: b'Hello, World!'
+~~~
 
