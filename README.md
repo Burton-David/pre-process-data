@@ -4,10 +4,21 @@
 This program first tries to load the CSV file with the default arguments of the read_csv function. If that fails, it tries to load the file with a different delimiter (tab-separated values). If that also fails, it tries to load the file with no header row. If all of these attempts fail, it tries to load the file with a different encoding and a different quoting style. If all attempts fail, it raises a ValueError indicating that the CSV file could not be loaded.
 
 Keep in mind that this approach may not work for all CSV files, as the formatting and structure of CSV files can vary widely. In some cases, you may need to manually inspect and pre-process the CSV file before it can be loaded into a Pandas dataframe.<br>
+
 ## explore.ipynb
 This Jupyter notebook first imports the necessary modules (Pandas, Matplotlib, and Seaborn) and the load_csv function from the loadCSV module. It then prompts the user to enter the name of the CSV file and loads it into a Pandas dataframe using the load_csv function.
 
 Next, it prints the first few rows of the dataframe using the head function and calculates basic statistics for the numerical columns using the describe function. Finally, it uses the Seaborn library to plot a pairplot of the data, and displays the plot using the show function from Matplotlib.
+
+## clean_data.py
+This function performs several steps to clean the data in the input dataframe:
+
+It removes rows with missing values using the dropna function.
+It drops duplicate rows using the drop_duplicates function.
+It replaces invalid or out-of-range values with NaN using the replace function.
+It imputes missing values using the median or mode of the respective column, depending on the data type.
+It normalizes numerical columns by subtracting the mean and dividing by the standard deviation, using the mean and std functions.
+Finally, the function returns the cleaned dataframe.
 ## plotly_visualzation.py
 This script first imports the load_csv function from the loadCSV module, and then prompts the user to enter the name of the CSV file. It loads the CSV file into a Pandas dataframe using the load_csv function, and then uses various Plotly functions from the express module to create different types of plots.
 
